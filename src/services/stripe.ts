@@ -6,3 +6,11 @@ export const stripe = axios.create({
     'Authorization': `Bearer ${process.env.STRIPE_API_KEY}`
   }
 })
+
+export const stripeBase = axios.create({
+  baseURL: 'https://api.stripe.com/v1/',
+  auth: {
+    username: `${process.env.STRIPE_API_KEY}`,
+    password: ''
+  }
+})
